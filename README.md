@@ -3,7 +3,7 @@
 Make your happier programming!
 
 ## Characteristics:
-Scope of use
+Supported language
  - C
  - C++
  - Python
