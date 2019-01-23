@@ -1,4 +1,4 @@
-# my-package package
+# Atom_init_script
 
 A short description of your package.
 
