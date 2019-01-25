@@ -1,5 +1,5 @@
 {
-  "name": "Atom_init_script",
+  "name": "init_script",
   "main": "./lib/init-script",
   "version": "0.1.0",
   "author":"nepire",
