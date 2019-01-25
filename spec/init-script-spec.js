@@ -1,6 +1,6 @@
 'use babel';
 
-import MyPackage from '../lib/my-package';
+import MyPackage from '../lib/init-script';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //

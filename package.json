@@ -1,14 +1,15 @@
 {
-  "name": "my-package",
-  "main": "./lib/my-package",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "name": "Atom_init_script",
+  "main": "./lib/init-script",
+  "version": "0.1.0",
+  "author":"nepire",
+  "description": "Make your happier programming!",
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "my-package:toggle"
+    "atom-workspace": "init c,cpp,python,go script"
   },
-  "repository": "https://github.com/atom/my-package",
+  "repository": "https://github.com/Nepire/Atom_init_script",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
