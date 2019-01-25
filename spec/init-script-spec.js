@@ -1,44 +1,44 @@
 'use babel';
 
-import MyPackage from '../lib/init-script';
+import InitScript from '../lib/init-script';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('MyPackage', () => {
+describe('InitScript', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('my-package');
+    activationPromise = atom.packages.activatePackage('init-script');
   });
 
-  describe('when the my-package:toggle event is triggered', () => {
+  describe('when the init-script:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.my-package')).not.toExist();
+      expect(workspaceElement.querySelector('.init-script')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'my-package:toggle');
+      atom.commands.dispatch(workspaceElement, 'init-script:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.my-package')).toExist();
+        expect(workspaceElement.querySelector('.init-script')).toExist();
 
-        let myPackageElement = workspaceElement.querySelector('.my-package');
+        let initScriptElement = workspaceElement.querySelector('.init-script');
         expect(myPackageElement).toExist();
 
-        let myPackagePanel = atom.workspace.panelForItem(myPackageElement);
-        expect(myPackagePanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'my-package:toggle');
-        expect(myPackagePanel.isVisible()).toBe(false);
+        let initScriptPanel = atom.workspace.panelForItem(myPackageElement);
+        expect(initscriptPanel.isVisible()).toBe(true);
+        atom.commands.dispatch(workspaceElement, 'init-script:toggle');
+        expect(initScriptPanel.isVisible()).toBe(false);
       });
     });
 
@@ -51,11 +51,11 @@ describe('MyPackage', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.my-package')).not.toExist();
+      expect(workspaceElement.querySelector('.init-script')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'my-package:toggle');
+      atom.commands.dispatch(workspaceElement, 'init-script:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,11 +63,11 @@ describe('MyPackage', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let myPackageElement = workspaceElement.querySelector('.my-package');
-        expect(myPackageElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'my-package:toggle');
-        expect(myPackageElement).not.toBeVisible();
+        let initScriptElement = workspaceElement.querySelector('.init-script');
+        expect(initScriptElement).toBeVisible();
+        atom.commands.dispatch(workspaceElement, 'init-script:toggle');
+        expect(initScriptElement).not.toBeVisible();
       });
     });
-  });
+});
 });

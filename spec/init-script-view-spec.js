@@ -1,8 +1,8 @@
 'use babel';
 
-import MyPackageView from '../lib/init-script-view';
+import InitScriptView from '../lib/init-script-view';
 
-describe('MyPackageView', () => {
+describe('InitScriptView', () => {
   it('has one valid test', () => {
     expect('life').toBe('easy');
   });
