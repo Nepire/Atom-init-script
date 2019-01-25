@@ -1,0 +1,19 @@
+{
+  "name": "init-script",
+  "main": "./lib/init-script",
+  "author": "nepire",
+  "version": "0.1.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "init-script:toggle"
+  },
+  "repository": "https://github.com/Nepire/Atom_init_script",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
