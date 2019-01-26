@@ -2,7 +2,7 @@
   "name": "init-script",
   "main": "./lib/init-script",
   "author": "nepire",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A short description of your package",
   "keywords": [
   ],
